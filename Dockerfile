@@ -30,7 +30,7 @@ RUN git clone -b master https://github.com/frappe/bench.git bench-repo
 
 USER root
 # Install bench
-RUN pip3 install -e git+https://github.com/frappe/bench.git#egg=bench \
+RUN pip3 install -e git+https://github.com/frappe/bench.git@master#egg=bench \
   && rm -rf ~/.cache/pip \
   && chown -R frappe:frappe /home/frappe/*
 
